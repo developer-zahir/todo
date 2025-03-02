@@ -77,3 +77,8 @@
 #task-list::-webkit-scrollbar-thumb:hover {
   @apply bg-blue-600;
 }
+
+
+.bg-primary {
+  background-color: #2563eb !important;
+}
