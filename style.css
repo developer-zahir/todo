@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.task-item {
+  @apply border-b border-gray-100 py-4 flex items-start justify-between;
+}
+
+.task-checkbox {
+  @apply h-6 w-6 rounded-full border-2 border-gray-300 flex-shrink-0 cursor-pointer;
+}
+
+.task-checkbox.checked {
+  @apply bg-green-500 border-green-500 flex items-center justify-center text-white;
+}
+
+.task-text {
+  @apply ml-4 flex-grow;
+}
+
+.task-text.completed {
+  @apply line-through text-gray-400;
+}
+
+.priority-badge {
+  @apply text-xs px-2 py-1 rounded-md text-white;
+}
+
+.priority-high {
+  @apply bg-red-400;
+}
+
+.priority-medium {
+  @apply bg-yellow-400;
+}
+
+.priority-low {
+  @apply bg-green-400;
+}
+
+.task-actions {
+  @apply flex gap-2;
+}
+
+.task-edit, .task-delete {
+  @apply p-1 rounded hover:bg-gray-100;
+}
+
+.task-edit {
+  @apply text-gray-600;
+}
+
+.task-delete {
+  @apply text-red-500;
+}
+
+/* Custom scrollbar styles */
+#task-list {
+  @apply max-h-[400px] overflow-y-auto pr-1;
+  scrollbar-width: thin;
+  scrollbar-color: #3b82f6 #e5e7eb;
+}
+
+/* For Webkit browsers (Chrome, Safari, etc.) */
+#task-list::-webkit-scrollbar {
+  @apply w-2;
+}
+
+#task-list::-webkit-scrollbar-track {
+  @apply bg-gray-200 rounded-full;
+}
+
+#task-list::-webkit-scrollbar-thumb {
+  @apply bg-primary rounded-full;
+}
+
+#task-list::-webkit-scrollbar-thumb:hover {
+  @apply bg-blue-600;
+}
