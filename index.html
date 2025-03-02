@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Todo App</title>
     <!-- Tailwind CSS CDN -->
-    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body class="bg-blue-100 min-h-screen flex items-center justify-center p-4">
     <div id="app" class="bg-white rounded-lg shadow-lg w-full max-w-lg p-6">
       <h1 class="text-3xl font-bold text-primary mb-4">Todo List</h1>
-      
+
       <!-- Progress bar -->
       <div class="mb-6">
         <div class="flex justify-between text-sm mb-1">
@@ -22,33 +22,36 @@
           <div id="progress-bar" class="h-2 bg-primary rounded-full" style="width: 0%"></div>
         </div>
       </div>
-      
+
       <!-- Add task form -->
       <div class="flex gap-2 mb-6">
-        <input 
-          type="text" 
-          id="new-task-input" 
-          placeholder="What needs to be done?" 
+        <input
+          type="text"
+          id="new-task-input"
+          placeholder="What needs to be done?"
           class="flex-grow px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
-        >
-        <select 
-          id="priority-select" 
+        />
+        <select
+          id="priority-select"
           class="px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
         >
           <option value="low">Low</option>
           <option value="medium">Medium</option>
           <option value="high">High</option>
         </select>
-        <button 
-          id="add-task-btn" 
+        <button
+          id="add-task-btn"
           class="bg-primary text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 whitespace-nowrap"
         >
           ADD TASK
         </button>
       </div>
-      
+
       <!-- Task list with scrollbar -->
-      <div id="task-list" class="space-y-4 max-h-[400px] overflow-y-auto pr-1 scrollbar scrollbar-thin scrollbar-thumb-primary scrollbar-track-gray-200">
+      <div
+        id="task-list"
+        class="space-y-4 max-h-[400px] overflow-y-auto pr-1 scrollbar scrollbar-thin scrollbar-thumb-primary scrollbar-track-gray-200"
+      >
         <!-- Tasks will be added here dynamically -->
       </div>
     </div>
@@ -57,13 +60,13 @@
         theme: {
           extend: {
             colors: {
-              'primary': '#3b82f6',
-            }
+              primary: "#3b82f6",
+            },
           },
-        }
-      }
+        },
+      };
     </script>
-    <script src="/tailwind.config.js"></script>
+
     <script src="/main.js"></script>
   </body>
 </html>
